@@ -40,21 +40,9 @@
             $id = $row['song_id'];
             ?>
             <div class="col-md-6" style="text-align: left;">
-                <h2> Name of Music: <?php echo $row['song_name'];?> </h2>
+                <h2> Name of Toy: <?php echo $row['song_name'];?> </h2>
                 <p>Price: <?php echo $row['song_price'];?> </p>
-                <audio controls controlsList="nodownload" ontimeupdate="myAudio(this)" style="width: 250px;">
-                <source src="baihat/<?php echo $song_audio?>" type="audio/mpeg">
-                </audio>
-                <script type="text/javascript">
-                           function myAudio(event){
-                               if(event.currentTime>30){
-                                   event.currentTime=0;
-                                   event.pause();
-                                   alert("Bạn phải trả phí để nghe cả bài")
-                               }
-                           }
                        </script>
-                       <h5> Singer:<?php echo $row["singer_name"] ;?></h5>
                        <h4> Genre:<?php echo $row["genre_name"]; ?></h4>
 
                       <a href="Addcart.php?id=<?php echo $id ;?>">  <button type="submit" name ="buy" class='btn btn-primary'><i class="fas fa-cart-plus"></i> Add to cart</button> 

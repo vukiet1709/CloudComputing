@@ -63,13 +63,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://avatar-ex-swe.nixcdn.com/slideshow/2022/07/13/d/5/2/0/1657690980791_org.jpg" alt="First slide" >
+      <img class="d-block w-100" src="https://play-lh.googleusercontent.com/4i5o3vN_Z4n3LmDoGWeYbcCIQBV530G3VpczY-TQ2RYtRJsEZQmrWYk9bgmfqhjfAhw" alt="First slide" >
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://avatar-ex-swe.nixcdn.com/slideshow/2022/07/11/c/2/1/4/1657530856773_org.jpg" alt="Second slide">
+      <img class="d-block w-100" src="https://img.websosanh.vn/v10/users/review/images/a26iomp242kla/lego-ninjago-lloyds.jpg?compress=85" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://i.ytimg.com/vi/F5tS5m86bOI/maxresdefault.jpg" alt="Third slide">
+      <img class="d-block w-100" src="https://kidz.vn/wp-content/uploads/2019/01/lego-2019.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -92,7 +92,7 @@
 		<div class="product-group">
             <div class="row">            
             <?php
-            $connect= mysqli_connect('localhost','root','','songs_website');
+            $connect= mysqli_connect('3.132.234.157','vntk_user','123@123a','vntk_db');
             $sql = "SELECT * FROM song";            
             $result = mysqli_query($connect, $sql);
             // Trả về kết quả dạng 1 mảng
@@ -108,21 +108,11 @@
                       <img class="card-img-top" src="Img/<?php echo"$song_image"?>">
                       <div class="card-body">
                         <h5 class="card-title"><?php echo"$song_name"?></h5>
-                       <audio controls controlsList="nodownload" ontimeupdate="myAudio(this)" style="width: 250px;">
-                           <source src="baihat/<?php echo $song_audio?>" type="audio/mpeg">
-                       </audio>
-                       <script type="text/javascript">
-                           function myAudio(event){
-                               if(event.currentTime>30){
-                                   event.currentTime=0;
-                                   event.pause();
-                                   alert("Bạn phải trả phí để nghe cả bài")
-                               }
-                           }
+                       
                        </script>
                        <?php
                        echo"
-                        <a href='detail.php?id=$song_id' class='btn btn-primary'>Details</a> "?>
+                        <a href='detail.php?id=$song_id' class='btn btn-primary'>Detail</a> "?>
                       </div>
                     </div>
                 </div>
