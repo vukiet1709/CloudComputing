@@ -93,7 +93,7 @@
 		<div class="product-group">
             <div class="row">            
             <?php
-            $connect= mysqli_connect('3.132.234.157','vntk_user','123@123a','vntk_db');
+            $connect= mysqli_connect('3.128.54.48','vntk_user','123@123a','vntk_db');
             $sql = "SELECT * FROM song";            
             $result = mysqli_query($connect, $sql);
             // Trả về kết quả dạng 1 mảng
